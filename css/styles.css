@@ -1,0 +1,192 @@
+*{
+    box-sizing: border-box;
+  }
+
+  .card__title{
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    text-overflow: ellipsis;
+  }
+  *{
+    box-sizing: border-box;
+}
+
+.col-md-2{
+    padding: 4px;
+    margin: 0;
+}
+.product{
+    /* border: 1px solid rgba(0, 0, 0, 0.12); */
+    /* border-radius: 10px; */
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.image {
+    margin-bottom: 10px;
+    text-align: center;
+    justify-content: center;
+}
+.image img{
+    max-height: 150px;
+    width: 100%;
+    max-width: 200px;
+    object-fit: cover;
+    /* border-radius: 10px; */
+    border-end-end-radius: 0;
+    border-end-start-radius: 0;
+}
+
+.info{
+    /* justify-content: end; */
+}
+.info p{
+    /* max-width: 90px; */
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    align-items: flex-end;
+}
+
+.info-price{
+    display: flex;
+    flex-flow: row nowrap;
+    /* justify-content: space-between; */
+    text-align: end;
+    padding: 10px;
+    line-height: 1;
+}
+
+.prices{
+    justify-content: start;
+}
+.current-price{
+    font-size: 17px;
+    font-weight: bolder;
+}
+.real-price{
+    font-size: 14px;
+}
+  /* =========================================== */
+  /* Swiper */
+  /* ========================================== */
+
+  .swiper-container {
+    width: 100%;
+    height: 450px;
+  }
+
+  .swiper-slide .image{
+      display: block;
+      text-align: center;
+  }
+  .swiper-slide .image img{
+      width: 450px;
+      max-width: 650px;
+      height: auto;
+      max-height: 450px;
+  }
+  /* /Swiper */
+  
+  /* Large desktops and laptops */
+  @media (min-width: 1200px) {
+  
+  }
+  
+  /* Portrait tablets and medium desktops */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    
+  }
+  
+  /* Portrait tablets and small desktops */
+  @media (min-width: 721px) and (max-width: 991px) {
+    .container{
+        max-width: 991px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+    
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        /* justify-content: center; */
+    }
+    
+    .item{
+        padding: 50px 10px;
+        box-sizing: border-box;
+        text-align: center;
+        width: calc(100% / 12 * 3 - 30px);
+        margin: 15px;
+        /* min-width: calc(150px - 60px); */
+    }
+    .swiper-button-prev, .swiper-button-next{
+        visibility: hidden;
+    }
+  }
+  
+  /* Landscape phones and portrait tablets */
+  @media (min-width: 481px) and (max-width: 721px) {
+    .item{
+        padding: 50px 10px;
+        box-sizing: border-box;
+        text-align: center;
+        width: calc(100% / 12 * 4 - 30px);
+        margin: 15px;
+        min-width: calc(150px - 60px);
+    }
+    .swiper-slide .image img{
+        width: 400px;
+        max-width: 400px;
+        height: auto;
+        max-height: 400px;
+        margin: 0 auto;
+    }
+    .swiper-button-prev, .swiper-button-next{
+        visibility: hidden;
+    }
+  }
+  
+  /* Landscape phones and smaller */
+  @media (max-width: 480px) {
+      
+    .swiper-slide .image{
+        display: block;
+        text-align: center;
+    }
+    .swiper-slide .image img{
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+        max-height: 300px;
+        margin: 0 auto;
+    }
+    .swiper-button-prev, .swiper-button-next{
+        visibility: hidden;
+    }
+    .info p{
+        padding: 0;
+        margin: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 13px;
+    }
+    .container{
+        padding: 30px;
+    }
+  }
+  
+  /*По надобности дописую промежуточные разрешения, если вдруг по дизайну что то падает на 650px, тогда дописую:*/
+  
+  @media (max-width: 650) {
+  
+  } 
+  
+  @media (max-width: 285px){
+    .row{
+        justify-content: center;
+    }
+  }
