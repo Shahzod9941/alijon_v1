@@ -30,7 +30,7 @@
 .image img{
     max-height: 150px;
     width: 100%;
-    max-width: 200px;
+    /* max-width: 200px; */
     object-fit: cover;
     /* border-radius: 10px; */
     border-end-end-radius: 0;
@@ -130,14 +130,7 @@
   
   /* Landscape phones and portrait tablets */
   @media (min-width: 481px) and (max-width: 721px) {
-    .item{
-        padding: 50px 10px;
-        box-sizing: border-box;
-        text-align: center;
-        width: calc(100% / 12 * 4 - 30px);
-        margin: 15px;
-        min-width: calc(150px - 60px);
-    }
+
     .swiper-slide .image img{
         width: 400px;
         max-width: 400px;
@@ -152,7 +145,7 @@
   
   /* Landscape phones and smaller */
   @media (max-width: 480px) {
-      
+
     .swiper-slide .image{
         display: block;
         text-align: center;
